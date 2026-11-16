@@ -1,0 +1,30 @@
+From de2138a434a35d8136a1d19807e579f5fa24f810 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Mon, 16 Nov 2026 21:36:12 +0300
+Subject: [PATCH] Fix build errors
+
+---
+ CMakeLists.txt | 7 -------
+ 1 file changed, 7 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 30b4f6a..7b1f5ec 100755
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,13 +2,6 @@
+ # Top-level CMakeLists.txt file for Crazy Eddie's GUI System
+ ################################################################################
+ cmake_minimum_required(VERSION 3.1)
+-if (POLICY CMP0017)
+-    cmake_policy(SET CMP0017 OLD)
+-endif()
+-
+-if (POLICY CMP0045)
+-    cmake_policy(SET CMP0045 OLD)
+-endif()
+ 
+ if (APPLE AND NOT CMAKE_OSX_ARCHITECTURES)
+     set( CMAKE_OSX_ARCHITECTURES x86_64 CACHE STRING "Build architectures for Mac OS X")
+--
+libgit2 1.9.7
+
